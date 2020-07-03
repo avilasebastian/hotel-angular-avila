@@ -1,0 +1,29 @@
+<div class="container md-form">
+
+  <div class="row">
+    <div class="col-auto">
+      <h5 for="fecha" class="grey-text">Desde</h5>
+      <h5 for="fecha" class="grey-text">Hasta</h5>
+    </div>
+    <div class="col">
+      <form #myForm="ngForm" novalidate>
+        <my-date-picker name="mydate" [options]="myDatePickerOptionsCheckIn" [(ngModel)]="checkIn" required></my-date-picker>
+      </form>
+      <form #myForm="ngForm" novalidate>
+        <my-date-picker name="mydate" [options]="myDatePickerOptionsCheckOut" [(ngModel)]="checkOut" required></my-date-picker>
+      </form>
+
+      <h5>Noches: {{getDias()}} </h5> 
+    </div>
+    <div class="col contenedor3 ">
+      <div class="contenido3">{{precioTotal()|currency:'USD':'symbol':'1.0-0'}}</div>
+    </div>
+    <div class="col contenedor3">
+      <div class="contenido3">
+        <a routerLink='/home'>
+          <button type="button" class="btn btn-success">Reservar</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

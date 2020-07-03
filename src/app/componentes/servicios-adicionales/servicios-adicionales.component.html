@@ -1,0 +1,23 @@
+<div class="container  item bg-white ">
+  <h2>Servicios Adicionales</h2>
+
+  <form action="" style="width:100%;">
+    <div class="row" *ngFor="let elemento of hotel.servicios; let i=index">
+
+
+      <div class="col">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" (change)="$event.target.checked? si(elemento.precio) : no(elemento.precio) "
+            type="checkbox" id="defaultCheck{{i}}">
+          <label class="form-check-label" for="defaultCheck{{i}}">
+            {{elemento.nombre}}
+          </label>
+        </div>
+      </div>
+      <div class="col">{{elemento.precio|currency:'USD':'symbol':'1.0-0'}}</div>
+
+
+    </div>
+  </form>
+
+</div>

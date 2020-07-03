@@ -1,0 +1,12 @@
+.item {
+    box-shadow: 0 1px 4px rgba(41,51,57,.5);
+    margin-left:15px; 
+    margin-bottom: 8px;
+    position: relative;
+    width: 477px;
+    /* max-width: 500px;
+	min-width: 300px; */
+	max-height: 500px;
+    min-height: 200px;
+    
+}

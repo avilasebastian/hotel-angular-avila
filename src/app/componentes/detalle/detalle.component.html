@@ -1,0 +1,15 @@
+<div class="formato-detalle">
+
+  <app-item *ngIf="elemnto != null" [hotel]=elemnto></app-item>
+  <div class="row">
+    <app-habitaciones *ngIf="elemnto != null" [hotel]=elemnto (tipoHabitacion)="habitacionSeleccionada($event)">
+    </app-habitaciones>
+    <br>
+    <app-servicios-adicionales *ngIf="elemnto != null" [hotel]=elemnto (cambio)="funcionCambiar($event)">
+    </app-servicios-adicionales>
+  </div>
+  <div class="  item bg-white">
+    <app-fechas [total]="getPrecioTotal()"></app-fechas>
+  </div>
+
+</div>

@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col">
+    {{hijo}}
+    <a routerLink='../detalle/{{hotel.id}}'>
+      <img class="cajaFoto" src="{{hotel.image()}}">
+    </a>
+  </div>
+  <div class="col-5 " style=" margin:20px">
+    <a routerLink='../detalle/{{hotel.id}}'>
+      <h2 style="color: black">{{hotel.nombre}}</h2>
+    </a>
+    <h3>
+      <ngb-rating class="star" [rate]="hotel.estrellas" [readonly]="true" max="5"></ngb-rating>
+    </h3>
+    <p>{{hotel.lugar}}</p>
+  </div>
+
+  <div class="col" style=" margin:20px">
+    <a class="btn" routerLink='../detalle/{{hotel.id}}'>
+      <h1>{{hotel.habitacionMasBarata()|currency:'USD':'symbol':'1.0-0'}}</h1>
+    </a>
+  </div>
+</div>
